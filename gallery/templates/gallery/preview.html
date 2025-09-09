@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery Preview</title>
+</head>
+<body>
+    <h1>Preview Image</h1>
+    <img src="data:image/jpeg;base64,{{ image_base64 }}" alt="Preview" />
+    <form method="post">
+        {% csrf_token %}
+        <label>Index to save:</label>
+        <input type="number" name="index" required />
+        <button type="submit">Save with index</button>
+    </form>
+</body>
+</html>
